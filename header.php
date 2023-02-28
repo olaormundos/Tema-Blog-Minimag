@@ -85,18 +85,26 @@
 									SIGA:
 								</div>
 								<div class="socialicons">
-									<a href="https://facebook.com" target="_blank">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" />
-									</a>
-									<a href="https://instagram.com" target="_blank">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" />
-									</a>
-									<a href="https://twitter.com" target="_blank">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png" />
-									</a>
-									<a href="https://youtube.com" target="_blank">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" />
-									</a>
+									<?php if(get_theme_mod( 'olm_facebook' )): ?>
+										<a href="<?php echo get_theme_mod( 'olm_facebook' ); ?>" target="_blank">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" />
+										</a>
+									<?php endif; ?>
+									<?php if(get_theme_mod( 'olm_instagram' )): ?>
+										<a href="<?php echo get_theme_mod( 'olm_instagram' ); ?>" target="_blank">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" />
+										</a>
+									<?php endif; ?>
+									<?php if(get_theme_mod( 'olm_twitter' )): ?>
+										<a href="<?php echo get_theme_mod( 'olm_twitter' ); ?>" target="_blank">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png" />
+										</a>
+									<?php endif; ?>
+									<?php if(get_theme_mod( 'olm_youtube' )): ?>
+										<a href="<?php echo get_theme_mod( 'olm_youtube' ); ?>" target="_blank">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" />
+										</a>
+									<?php endif; ?>
 								</div>
 							</div>
 						</div>
