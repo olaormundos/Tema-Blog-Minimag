@@ -5,34 +5,35 @@
 </head>
 <body <?php body_class(); ?>>
 	<header>
+		<?php if(get_theme_mod( 'olm_topmenu_show' ) == 'yes'): ?>
+			<div class="top_header">
+				<nav class="navbar navbar-default">
+					<div class="container">
 
-		<div class="top_header">
-			<nav class="navbar navbar-default">
-				<div class="container">
+						<div class="navbar-header">
+							<div class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</div>
+						</div>
 
-					<div class="navbar-header">
-						<div class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
+						<div class="collapse navbar-collapse" id="navbar">
+							<?php
+							if(has_nav_menu('top')) {
+								wp_nav_menu(array(
+									'theme_location' => 'top',
+									'container' => false,
+									'fallback_cb' => false,
+									'menu_class' => 'nav navbar-nav'
+								));
+							}
+							?>
 						</div>
 					</div>
-
-					<div class="collapse navbar-collapse" id="navbar">
-						<?php
-						if(has_nav_menu('top')) {
-							wp_nav_menu(array(
-								'theme_location' => 'top',
-								'container' => false,
-								'fallback_cb' => false,
-								'menu_class' => 'nav navbar-nav'
-							));
-						}
-						?>
-					</div>
-				</div>
-			</nav>
-		</div>
+				</nav>
+			</div>
+		<?php endif; ?>
 		<div class="main_header">
 			<div class="container">
 				<div class="logo">
@@ -55,7 +56,11 @@
 						}
 						?>
 						<div class="search_area">
-							<?php get_search_form(); ?>
+							<?php
+								if(get_theme_mod( 'olm_search_show' ) == 'yes'):
+									get_search_form();
+								endif;	
+							?>	
 						</div>
 					</div>
 					<div class="main_info">

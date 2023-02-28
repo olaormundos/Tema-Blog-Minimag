@@ -11,7 +11,10 @@
 	</div>
 	<div class="mainfooter">
 		<div class="mainfooter_left">
-			Todos os direitos reservados.
+			Todos os direitos reservados. - 
+			<?php if(get_theme_mod( 'olm_privacy_url' )): ?>
+				<a href="<?php the_permalink( get_theme_mod( 'olm_privacy_url' )); ?>">Política de Privacidade</a>
+			<?php endif; ?>	
 		</div>
 		<div class="mainfooter_right">
 			Criado por XYZ
