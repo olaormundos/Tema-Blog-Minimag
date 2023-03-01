@@ -7,7 +7,8 @@ function olm_layout_customizer( $wp_customize ) {
   // Sections
     $wp_customize->add_section('olm_layout_section', array(
       'title'    => 'Opções de Layout',
-      'priority' => 1
+      'priority' => 1,
+      'panel'    => 'opcoes'
     ));
   // Controllers
     $wp_customize->add_control(

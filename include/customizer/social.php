@@ -10,6 +10,7 @@ function olm_social_customizer( $wp_customize ) {
     $wp_customize->add_section('olm_social_saction', array(
       'title'    =>'Redes Sociais',
       'priority' => 2,
+      'panel'    => 'opcoes'
     ));
   // Controllers
     $wp_customize->add_control(
