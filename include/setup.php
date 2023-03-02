@@ -2,6 +2,7 @@
 function olm_theme_styles() {
 	wp_enqueue_style('bootstrap_css', get_template_directory_uri().'/assets/css/bootstrap.min.css');
 	wp_enqueue_style('style_css', get_template_directory_uri().'/assets/css/style.css');
+	wp_enqueue_style('template_scss', get_template_directory_uri().'/assets/sass/template.scss');
 	wp_enqueue_style('template_css', get_template_directory_uri().'/assets/css/template.css');
 
 	wp_enqueue_script('bootstrap_js', get_template_directory_uri().'/assets/js/bootstrap.min.js', array('jquery'), false, true);
