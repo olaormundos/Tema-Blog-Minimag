@@ -4,10 +4,12 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 maincontent">
+			<div id="<?php the_ID(); ?>" <?php post_class('col-sm-8 maincontent'); ?>>
 				<?php if(have_posts()): ?>
 					<?php while(have_posts()): ?>
 						<?php the_post(); ?>
+
+							<div class="post_tumbnail"><?php the_post_thumbnail(); ?></div>
 
 							<div class="post_title post_title_single"><?php the_title(); ?></div>
 
