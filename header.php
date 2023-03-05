@@ -68,20 +68,28 @@
 							<div class="col-sm-8 randompost">
 								<strong>Você já viu?</strong>
 								<?php
-								$bm_query = new WP_Query(array(
-									'posts_per_page' => 1,
-									'post_type' => 'post',
-									'orderby' => 'rand'
-								));
-								if($bm_query->have_posts()) {
-									while($bm_query->have_posts()) {
-										$bm_query->the_post();
-										?>
-										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										<?php
+								if(function_exists('wpp_get_mostpopular')){
+									wpp_get_mostpopular( array(
+										'limit' => 1,
+										'wpp_start' => '',
+										'wpp_end'   => '',
+										'post_html' => '<a href="{url}">{text_title}</a>',
+									));
+								}else{
+									$bm_query = new WP_Query(array(
+										'posts_per_page' => 1,
+										'post_type' => 'post',
+										'orderby' => 'rand'
+									));
+									if($bm_query->have_posts()) {
+										while($bm_query->have_posts()) {
+											$bm_query->the_post();
+											?>
+											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											<?php
+										}
+										wp_reset_postdata();
 									}
-
-									wp_reset_postdata();
 								}
 								?>
 							</div>

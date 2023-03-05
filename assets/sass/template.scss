@@ -216,7 +216,7 @@ footer {
 }
 .post_thumb {
   width: 100%;
-  height: auto;
+  height: 257px;
   margin-top: -22px;
 }
 .post_data {
@@ -282,6 +282,13 @@ footer {
   color: #5e5e5e;
   text-decoration: none;
   font-size: 16px;
+}
+
+.wpp_list,
+.wpp-no-data {
+  margin: 0;
+  padding: 0;
+  display: inline;
 }
 
 /* Tablet vertical */
