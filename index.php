@@ -12,7 +12,8 @@
 						<?php get_template_part('template_parts/post'); ?>
 
 					<?php endwhile; ?>
-
+					
+					<div style="clear:both"></div>
 					<div class="pag">
 						<div class="previous_pag"><?php previous_posts_link('Página Anterior'); ?></div>
 						<div class="next_pag"><?php next_posts_link('Próxima Página'); ?></div>
