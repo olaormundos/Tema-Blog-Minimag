@@ -16,6 +16,27 @@ function olm_after_setup() {
 	add_theme_support("post-formats", array(
 		'video', 'audio'
 	));
+	add_theme_support("custom-header", array(
+		'default-image' => get_template_directory_uri().'/assets/images/headers/Dead-Space.jpg',
+		'width'         => 1920,
+		'height'        => 400,
+		'flex-width'    => true,
+		'flex-height'   => true,
+		'header-text'   => true,
+		'uploads'       => true,
+	));
+	register_default_headers( array(
+		'header_padrao' => 	array(
+			'url'         	=>  get_template_directory_uri().'/assets/images/headers/Dead-Space.jpg',
+			'thumbnail_url' =>	get_template_directory_uri().'/assets/images/headers/Dead-Space.jpg',
+			'description'   => 'Header Padrão',
+		),
+		'header_custom' => 	array(
+			'url'         	=>  get_template_directory_uri().'/assets/images/headers/cyber-punk.jpg',
+			'thumbnail_url' =>	get_template_directory_uri().'/assets/images/headers/cyber-punk.jpg',
+			'description'   => 'Header Customizado',
+		)
+	));
 
 	register_nav_menu("primary", "Menu Primário");
 	register_nav_menu("top", "Menu Superior");
