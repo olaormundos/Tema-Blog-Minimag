@@ -1,0 +1,11 @@
+@media print {
+  header,
+  .sidebar,
+  .pag,
+  .comments_area,
+  .post_tumbnail,
+  .impressao,
+  footer {
+    display: none;
+  }
+}

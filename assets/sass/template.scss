@@ -312,6 +312,11 @@ footer {
   height: 72%;
 }
 
+.funcionalidades {
+  display: flex;
+  gap: 10px;
+}
+
 /* Tablet vertical */
 @media (min-width: 481px) and (max-width: 768px) {
   .maincontent article {
