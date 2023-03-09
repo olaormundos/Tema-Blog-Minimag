@@ -13,7 +13,13 @@
 
 							<div class="post_title post_title_single"><?php the_title(); ?></div>
 
-							<div class="post_data"><?php echo get_the_date(); ?></div>
+							<div class="funcionalidades">
+								<div class="post_data"><?php echo get_the_date(); ?></div>
+
+								<div class="impressao">
+										<button onclick="window.print()">Imprimir / Salvar PDF</button>
+								</div>
+							</div>
 
 							<div class="post_content"><?php the_content(); ?></div>
 								
