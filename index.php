@@ -15,8 +15,17 @@
 					
 					<div style="clear:both"></div>
 					<div class="pag">
-						<div class="previous_pag"><?php previous_posts_link('Página Anterior'); ?></div>
-						<div class="next_pag"><?php next_posts_link('Próxima Página'); ?></div>
+						<?php
+							global $wp_query;
+							echo paginate_links(array(
+								'current'            => max(1, get_query_var('paged')),
+								'total'              => $wp_query->max_num_pages,
+								'prev_text'          => 'Anterior',
+								'next_text'          => 'Próxima',
+								'before_page_number' => '[',
+								'after_page_number'  => ']',
+							));
+						?>
 						<div style="clear:both"></div>
 					</div>
 
