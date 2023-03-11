@@ -317,6 +317,18 @@ footer {
   gap: 10px;
 }
 
+.loadmoreButton {
+  width: 150px;
+  height: 40px;
+  background-color: #d2c900;
+  color: #0d021d;
+  text-align: center;
+  line-height: 40px;
+  margin: auto;
+  cursor: pointer;
+  font-weight: 600;
+}
+
 /* Tablet vertical */
 @media (min-width: 481px) and (max-width: 768px) {
   .maincontent article {
