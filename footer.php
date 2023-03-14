@@ -2,11 +2,7 @@
 <footer>
 	<div class="footer_widgets">
 		<div class="row">
-			<?php
-			if(is_active_sidebar('olm_footersidebar')) {
-				dynamic_sidebar('olm_footersidebar');
-			}
-			?>
+
 		</div>
 	</div>
 	<div class="mainfooter">
@@ -17,7 +13,7 @@
 			<?php endif; ?>	
 		</div>
 		<div class="mainfooter_right">
-			Criado por XYZ
+			Criado com ❤️ por OlaOrmundos
 		</div>
 		<div class="mainfooter_scroll">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/seta-up.png" />

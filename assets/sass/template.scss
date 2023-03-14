@@ -86,10 +86,11 @@ body {
 }
 
 .socialarea {
-  background-color: #3382b5;
+  background-color: #756d0e;
   height: 100%;
   margin-top: -8px;
-  color: #c2dae9;
+  color: #0d021d;
+  font-weight: 600;
 }
 .main_info .row {
   margin: 0;
@@ -245,7 +246,7 @@ footer {
 }
 
 .pag {
-  padding: 20px;
+  padding: 20px 0;
 }
 .previous_pag {
   float: left;
@@ -256,13 +257,39 @@ footer {
   text-align: right;
 }
 
+.single-post .post_tumbnail {
+  margin: 20px 0px 0px;
+}
+
+.single-post .post_tumbnail img {
+  width: 100%;
+}
+
+.single-post .comments_area .comment-form-comment {
+  display: inline-grid;
+  width: -webkit-fill-available;
+}
+
+.single-post .comments_area .form-submit #submit {
+  background-color: #d2c900;
+  color: #0d021d;
+  text-align: center;
+  line-height: 40px;
+  margin: auto;
+  font-weight: 600;
+  border: none;
+  padding: 0px 22px;
+  border-radius: 5px;
+}
+
 .post_content {
+  padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #cccccc;
 }
 .post_title_single {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 25px;
 }
 
@@ -327,6 +354,14 @@ footer {
   margin: auto;
   cursor: pointer;
   font-weight: 600;
+}
+
+.sidebar #block-7 .wp-block-tag-cloud a {
+  font-size: 18px !important;
+  background-color: #756d0e;
+  padding: 4px 22px;
+  margin-top: 5px;
+  color: #0d021d;
 }
 
 /* Tablet vertical */
