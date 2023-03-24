@@ -28,6 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - PHP
 - HTML
 - CSS
+  -SCSS
 - Bootstrap versão 3.3.7
 - Git e Github
 
